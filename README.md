@@ -1,16 +1,18 @@
 # Bitchaser
 
-<!-- ## Goal
-14-year analysis of BTC/USD market value OHLC from 07/17/2010 to 06/27/2024
-Long-term statistical model tested against 2-year data from 06/27/2024 to 06/27/2026
-Short-term time-series forecasting model
-Application of this model to future trajectory of BTC/USD -->
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![mypy](https://img.shields.io/badge/Type%20Checking-mypy-yellow)
+![Ruff](https://img.shields.io/badge/Lint-Ruff-red)
+![Docs](https://img.shields.io/badge/Docs-MkDocs-526CFE)
+![Status](https://img.shields.io/badge/Status-Active%20Development-orange)
+![License](https://img.shields.io/badge/License-Apache%202.0-green)
 
+<!-- Description -->
 BitChaser is a research project that investigates long-term and short-term forecasting of the Bitcoin (BTC/USD) market using statistical modeling and deep learning. The project analyzes historical daily OHLC data, develops interpretable long-horizon forecasting models along with short-horizon time-series prediction models.
 
 ## Status
 
-🚧 Active development
+🚧 Active development. Core project structure is complete; forecasting models are currently under implementation.
 
 ## Features
 
@@ -22,7 +24,125 @@ BitChaser is a research project that investigates long-term and short-term forec
 
 ---
 
+## Installation
+
+Requirements
+- Python 3.14
+- uv 0.11
+
+Clone the repository
+
+```bash
+git clone https://github.com/camden-white/bitchaser.git
+cd bitchaser
+```
+
+Install dependencies
+
+```bash
+make install
+```
+
+---
+
+## Usage
+
+Run the main program
+
+```bash
+make run
+```
+
+Launch Jupyter
+
+```bash
+make notebook
+```
+
+Serve documentation
+
+```bash
+make serve
+```
+
+---
+
+## Development
+
+### Workflow
+1. `git status` (optional)\
+Review unstaged changed files
+
+2. `make fix`\
+Auto-fix lint issues and format code to standards
+
+3. `make check` (or `make ci`)\
+Lint, format check, type check, and tests (and coverage)
+
+4. `make precommit`\
+update trees, fix whitespace/newlines, run all hooks
+
+5. `git diff` (optional)\
+Review any changes since last commit (q to exit)
+
+6. `git add .`\
+Add all files for commit
+
+7. `git commit -m "[message]"`\
+Commit files with message explaining change
+
+8. `git push`\
+Upload local commits to GitHub
+
+9. `git log` (optional)\
+Review commit logs
+
+### Makefile Commands
+
+| Command | Description |
+|---------|-------------|
+| `help` | Print Makefile targets |
+| `install` | Install project dependencies |
+| `update` | Upgrade dependencies |
+| `notebook` | Jupyter notebook |
+| `docs` | Build documentation |
+| `serve` | Serve documentation |
+| `lint` | Code linting |
+| `lintfix` | Auto-fix lint issues |
+| `formatcheck` | Check code format |
+| `format` | Format code to standards |
+| `typecheck` | Type checking |
+| `fix` | Auto-fix lint issues and format code to standards |
+| `test` | Run tests |
+| `check` | Lint, format check, type check, and tests |
+| `coverage` | Run tests with coverage report |
+| `ci` | Run checks and coverage |
+| `deptree` | Make dependency tree |
+| `projtree` | Make project tree |
+| `trees` | Make all trees |
+| `precommit` | Update trees, fix whitespace/newlines, run all hooks |
+| `run` | Run the application |
+| `clean` | Remove generated files |
+
+---
+
+---
+
+
 ## Project Structure
+
+### Main directories
+
+| Directory | Description |
+|---------|-------------|
+| data/ | Raw and processed datasets |
+| models/ | Saved trained models |
+| reports/ | Figures and analysis |
+| notebooks/ | Exploratory work |
+| src/ | Python package |
+| tests/ | Unit tests |
+
+### Project Tree
 
 <!-- PROJECT_TREE_START -->
 ```text
@@ -77,102 +197,8 @@ BitChaser is a research project that investigates long-term and short-term forec
 │   ├── test_features.py
 │   └── test_models.py
 └── uv.lock
-
-19 directories, 32 files
 ```
 <!-- PROJECT_TREE_END -->
-
----
-
-## Common Commands
-
-| Command | Description |
-|---------|-------------|
-| `make install` | Install dependencies |
-| `make run` | Run the application |
-| `make notebook` | Launch JupyterLab |
-| `make docs` | Serve documentation |
-| `make test` | Run tests |
-| `make coverage` | Generate coverage report |
-| `make fix` | Format and lint code |
-| `make check` | Run all quality checks |
-
----
-
-## Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/camden-white/bitchaser.git
-cd bitchaser
-```
-
-Install dependencies
-
-```bash
-make install
-```
-
----
-
-## Usage
-
-Run the main program
-
-```bash
-make run
-```
-
-Launch Jupyter
-
-```bash
-make notebook
-```
-
-Serve documentation
-
-```bash
-make docs
-make serve
-```
-
----
-
-## Development
-
-### Workflow
-1. `make fix` Auto-fix lint issues and format code to standards
-2. `make check` (or `make ci`) Lint, format check, type check, and tests (and coverage)
-3. `make precommit` update trees, fix whitespace/newlines, run all hooks
-4. `git diff` Review any changes since last commit (q to exit)
-5. `git add .` Add all files for commit
-6. `git commit -m "[message]"` Commit files with message explaining change
-7. `git push` Uploads local commits to GitHub
-
-Check code quality
-
-```bash
-make check
-```
-
-Automatically fix formatting
-
-```bash
-make fix
-```
-
-Run tests
-
-```bash
-make test
-```
-
-Generate coverage report
-
-```bash
-make coverage
-```
 
 ---
 
@@ -191,11 +217,11 @@ make serve
 
 ## Technologies
 
-- Python
 - MkDocs
-- pytest
-- Ruff
 - mypy
+- pytest
+- Python
+- Ruff
 - uv
 
 ---
@@ -209,12 +235,13 @@ Historical daily BTC/USD OHLC data from July 2010 through June 2024 is stored in
 
 ## Roadmap
 
-- [ ] 1
-- [ ] 2
-- [ ] 3
-- [ ] 4
-- [ ] 5
-- [ ] 6
+- [ ] Long-horizon model of BTC/USD support and resistance
+- [ ] Periodic trends in BTC/USD
+- [ ] Regressions between periods
+- [ ] Long-horizon periodic forcasting
+- [ ] Daily OHLC analysis
+- [ ] OHLC next-day prediction
+- [ ] OHLC multi-day prediction
 
 ---
 
@@ -228,10 +255,12 @@ See `LICENSE` for details.
 
 ## Author
 
-**Camden R. White**
+Camden R. White
 
-M.A.S. Applied Statistics & Data Science
-University of California, Los Angeles
+University of California, Los Angeles\
+*M.A.S. Applied Statistics & Data Science*
 
-B.S. Mathematics
-Oregon State University
+Oregon State University\
+*B.S. Mathematics*
+
+---

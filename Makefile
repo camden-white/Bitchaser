@@ -13,11 +13,12 @@ MYPY = $(RUN) mypy
 
 help:
 	@echo "Available targets:"
+	@echo "  help         Print Makefile targets"
 	@echo "  install      Install project dependencies"
 	@echo "  update       Upgrade dependencies"
 	@echo "  notebook     Jupyter notebook"
-	@echo "  docs         Build docs"
-	@echo "  serve        Serve docs"
+	@echo "  docs         Build documentation"
+	@echo "  serve        Serve documentation"
 	@echo "  lint         Code linting"
 	@echo "  lintfix      Auto-fix lint issues"
 	@echo "  formatcheck  Check code format"
@@ -91,7 +92,7 @@ deptree:
 projtree:
 	tree \
 	-I "site|trees|.venv|.git|.mypy_cache|.pytest_cache|.ruff_cache|__pycache__|htmlcov" \
-	> trees/proj.txt
+	> trees/proj.txt --noreport
 
 trees: deptree projtree
 	$(PYTHON) scripts/update_section.py
