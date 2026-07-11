@@ -8,6 +8,8 @@
 │   └── raw
 │       └── BTCUSD_OHLC.csv
 ├── docs
+│   └── index.md
+├── mkdocs.yaml
 ├── models
 ├── notebooks
 ├── pyproject.toml
@@ -44,9 +46,6 @@
 │   ├── test_data.py
 │   ├── test_features.py
 │   └── test_models.py
-├── trees
-│   ├── dep.txt
-│   └── proj.txt
 └── uv.lock
 
-19 directories, 31 files
+18 directories, 31 files

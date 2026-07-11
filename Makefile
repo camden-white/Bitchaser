@@ -1,66 +1,113 @@
-.PHONY: install update notebook docs lint format run typecheck test coverage check ci fix deptree projtree trees precommit clean
+.DEFAULT_GOAL := help
 
-RUN = uv run
+.PHONY: install update notebook docs serve lint lintfix formatcheck format typecheck fix test check coverage ci deptree projtree trees precommit run clean
+
+.DELETE_ON_ERROR:
+
+MAN = uv
+RUN = $(MAN) run
+RUFF = $(RUN) ruff
+PYTEST = $(RUN) pytest
+MYPY = $(RUN) mypy
+
+help:
+	@echo "Available targets:"
+	@echo "  install      Install project dependencies"
+	@echo "  update       Upgrade dependencies"
+	@echo "  notebook     Jupyter notebook"
+	@echo "  docs         Build docs"
+	@echo "  serve        Serve docs"
+	@echo "  lint         Code linting"
+	@echo "  lintfix      Auto-fix lint issues"
+	@echo "  formatcheck  Check code format"
+	@echo "  format       Format code to standards"
+	@echo "  typecheck    Type checking"
+	@echo "  fix          Auto-fix lint issues and format code to standards"
+	@echo "  test         Run tests"
+	@echo "  check        Lint, format check, type check, and tests"
+	@echo "  coverage     Run tests with coverage report"
+	@echo "  ci           Run checks and coverage"
+	@echo "  deptree      Make dependency tree"
+	@echo "  projtree     Make project tree"
+	@echo "  trees        Make all trees"
+	@echo "  precommit    Update trees, fix whitespace/newlines, run all hooks"
+	@echo "  run          Run the application"
+	@echo "  clean        Remove generated files"
 
 install:
-	uv sync
+	$(MAN) sync
+	$(RUN) pre-commit install
 	$(MAKE) trees
 
 update:
-	uv lock --upgrade
-	uv sync
+	$(MAN) lock --upgrade
+	$(MAN) sync
 	$(MAKE) trees
 
 notebook:
 	$(RUN) jupyter lab
 
 docs:
+	$(RUN) mkdocs build
+
+serve:
 	$(RUN) mkdocs serve
 
 lint:
-	$(RUN) ruff check .
+	$(RUFF) check .
+
+lintfix:
+	$(RUFF) check . --fix
+
+formatcheck:
+	$(RUFF) format --check .
 
 format:
-	$(RUN) ruff format .
+	$(RUFF) format .
 
-run:
-	$(RUN) python -m bitchaser.main
+fix: lintfix format
 
 typecheck:
-	$(RUN) mypy .
+	$(MYPY) .
 
 test:
-	$(RUN) pytest
+	$(PYTEST)
+
+check: lint formatcheck typecheck test
 
 coverage:
-	$(RUN) pytest --cov=bitchaser --cov-report=term-missing --cov-report=html
+	$(PYTEST) \
+		--cov=bitchaser \
+		--cov-report=term-missing \
+		--cov-report=html
 
-check: lint typecheck test
-	$(RUN) ruff format --check .
-
-ci: check coverage
-
-fix:
-	$(RUN) ruff check . --fix
-	$(RUN) ruff format .
+ci: lint formatcheck typecheck coverage
 
 deptree:
 	mkdir -p trees
-	uv tree > trees/dep.txt
+	$(MAN) tree > trees/dep.txt
 
 projtree:
-	mkdir -p trees
-	tree -I ".git|.venv|__pycache__|.mypy_cache|.pytest_cache|.ruff_cache|.ipynb_checkpoints" > trees/proj.txt
+	tree \
+	-I "site|trees|.venv|.git|.mypy_cache|.pytest_cache|.ruff_cache|__pycache__|htmlcov" \
+	> trees/proj.txt
 
 trees: deptree projtree
 
-precommit:
+precommit: trees
 	$(RUN) pre-commit run --all-files
+
+run:
+	$(RUN) python -m bitchaser.main
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
 	find . -name ".DS_Store" -delete
+	find . -type d -name ".ipynb_checkpoints" -exec rm -rf {} +
+	find . -name "*.nbconvert.ipynb" -delete
 	rm -rf .pytest_cache .mypy_cache .ruff_cache
 	rm -rf .coverage htmlcov
-	rm -rf .ipynb_checkpoints
+	rm -rf dist build *.egg-info
+	rm -rf site
+# 	rm -rf trees

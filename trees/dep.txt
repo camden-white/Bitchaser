@@ -74,7 +74,7 @@ bitchaser v0.1.0
 │   │   ├── ipykernel v7.3.0 (*)
 │   │   ├── jinja2 v3.1.6
 │   │   │   └── markupsafe v3.0.3
-│   │   ├── jupyter-builder v1.0.2
+│   │   ├── jupyter-builder v1.1.0
 │   │   │   ├── jupyter-core v5.9.1 (*)
 │   │   │   └── traitlets v5.15.1
 │   │   ├── jupyter-core v5.9.1 (*)
@@ -102,7 +102,7 @@ bitchaser v0.1.0
 │   │   │       │   │   ├── isoduration v20.11.0 (extra: format-nongpl)
 │   │   │       │   │   │   └── arrow v1.4.0
 │   │   │       │   │   │       ├── python-dateutil v2.9.0.post0 (*)
-│   │   │       │   │   │       └── tzdata v2026.2
+│   │   │       │   │   │       └── tzdata v2026.3
 │   │   │       │   │   ├── jsonpointer v3.1.1 (extra: format-nongpl)
 │   │   │       │   │   ├── rfc3339-validator v0.1.4 (extra: format-nongpl)
 │   │   │       │   │   │   └── six v1.17.0
@@ -183,7 +183,7 @@ bitchaser v0.1.0
 │   │   └── traitlets v5.15.1
 │   ├── nbconvert v7.17.1 (*)
 │   └── notebook v7.6.0
-│       ├── jupyter-builder v1.0.2 (*)
+│       ├── jupyter-builder v1.1.0 (*)
 │       ├── jupyter-server v2.20.0 (*)
 │       ├── jupyterlab v4.6.1 (*)
 │       ├── jupyterlab-server v2.28.0 (*)
@@ -234,7 +234,7 @@ bitchaser v0.1.0
 │   ├── identify v2.6.19
 │   ├── nodeenv v1.10.0
 │   ├── pyyaml v6.0.3
-│   └── virtualenv v21.6.0
+│   └── virtualenv v21.6.1
 │       ├── distlib v0.4.3
 │       ├── filelock v3.29.7
 │       ├── platformdirs v4.10.0
