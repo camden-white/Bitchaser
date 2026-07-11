@@ -6,6 +6,7 @@
 
 MAN = uv
 RUN = $(MAN) run
+PYTHON = $(RUN) python
 RUFF = $(RUN) ruff
 PYTEST = $(RUN) pytest
 MYPY = $(RUN) mypy
@@ -93,12 +94,13 @@ projtree:
 	> trees/proj.txt
 
 trees: deptree projtree
+	$(PYTHON) scripts/update_section.py
 
 precommit: trees
 	$(RUN) pre-commit run --all-files
 
 run:
-	$(RUN) python -m bitchaser.main
+	$(PYTHON) -m bitchaser.main
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +

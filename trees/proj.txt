@@ -15,6 +15,8 @@
 ├── pyproject.toml
 ├── reports
 │   └── figures
+├── scripts
+│   └── update_section.py
 ├── src
 │   └── bitchaser
 │       ├── __init__.py
@@ -48,4 +50,4 @@
 │   └── test_models.py
 └── uv.lock
 
-18 directories, 31 files
+19 directories, 32 files
