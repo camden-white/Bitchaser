@@ -85,7 +85,8 @@ coverage:
 
 check: lint formatcheck typecheck test
 
-ci: lint formatcheck typecheck coverage docs
+ci: lint formatcheck typecheck test docs
+# change `test` to `coverage` after you actually have code and tests
 
 deptree:
 	mkdir -p trees
