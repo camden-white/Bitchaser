@@ -11,6 +11,8 @@ RUFF = $(RUN) ruff
 PYTEST = $(RUN) pytest
 MYPY = $(RUN) mypy
 
+UPDATE_SECTION = $(PYTHON) scripts/update_section.py
+
 help:
 	@echo "Available targets:"
 	@echo "  help         Print Makefile targets"
@@ -95,7 +97,7 @@ projtree:
 	> trees/proj.txt --noreport
 
 trees: deptree projtree
-	$(PYTHON) scripts/update_section.py
+	$(UPDATE_SECTION) CONTRIBUTING.md PROJECT_TREE trees/proj.txt --fence text
 
 precommit: trees
 	$(RUN) pre-commit run --all-files

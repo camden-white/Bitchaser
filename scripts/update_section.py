@@ -2,6 +2,7 @@
 
 """Utility functions for updating marked sections of text files."""
 
+from argparse import ArgumentParser
 from pathlib import Path
 
 
@@ -48,9 +49,25 @@ def replace_between_markers(
     file.write_text(updated, encoding="utf-8")
 
 
-def main():
-    project_tree = f"```text\n{Path('trees/proj.txt').read_text().rstrip()}\n```"
-    replace_between_markers("README.md", "PROJECT_TREE", project_tree)
+def main() -> None:
+    parser = ArgumentParser(description="Replace a marked section of a text file.")
+
+    parser.add_argument("file")
+    parser.add_argument("marker")
+    parser.add_argument("replacement")
+    parser.add_argument(
+        "--fence",
+        help="Wrap the replacement text in a Markdown code fence.",
+    )
+
+    args = parser.parse_args()
+
+    replacement = Path(args.replacement).read_text(encoding="utf-8")
+
+    if args.fence:
+        replacement = f"```{args.fence}\n{replacement}\n```"
+
+    replace_between_markers(args.file, args.marker, replacement)
 
 
 if __name__ == "__main__":
