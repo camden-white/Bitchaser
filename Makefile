@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-.PHONY: install update notebook docs serve lint lintfix formatcheck format fix typecheck test coverage check ci deptree projtree trees precommit run clean
+.PHONY: help install update notebook docs serve lint lintfix formatcheck format fix typecheck static test coverage check ci deptree projtree trees precommit run clean
 
 .DELETE_ON_ERROR:
 
@@ -27,10 +27,11 @@ help:
 	@echo "  format       Format code to standards"
 	@echo "  fix          Auto-fix lint issues and format code to standards"
 	@echo "  typecheck    Type checking"
+	@echo "  static       Run static checks"
 	@echo "  test         Run tests"
 	@echo "  coverage     Run tests with coverage report"
 	@echo "  check        Lint, format check, type check, and run tests"
-	@echo "  ci           Lint, format check, type check, and run tests with coverage report"
+	@echo "  ci           Run full CI validation"
 	@echo "  deptree      Make dependency tree"
 	@echo "  projtree     Make project tree"
 	@echo "  trees        Make all trees"
@@ -74,6 +75,8 @@ fix: lintfix format
 typecheck:
 	$(MYPY) .
 
+static: lint formatcheck typecheck
+
 test:
 	$(PYTEST)
 
@@ -83,9 +86,9 @@ coverage:
 		--cov-report=term-missing \
 		--cov-report=html
 
-check: lint formatcheck typecheck test
+check: static test
 
-ci: lint formatcheck typecheck test docs
+ci: static test docs
 # change `test` to `coverage` after you actually have code and tests
 
 deptree:

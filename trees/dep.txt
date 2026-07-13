@@ -3,6 +3,43 @@ bitchaser v0.1.0
 │   ├── numpy v2.5.1
 │   └── python-dateutil v2.9.0.post0
 │       └── six v1.17.0
+├── mkdocs v1.6.1 (group: dev)
+│   ├── click v8.4.2
+│   ├── ghp-import v2.1.0
+│   │   └── python-dateutil v2.9.0.post0 (*)
+│   ├── jinja2 v3.1.6
+│   │   └── markupsafe v3.0.3
+│   ├── markdown v3.10.2
+│   ├── markupsafe v3.0.3
+│   ├── mergedeep v1.3.4
+│   ├── mkdocs-get-deps v0.2.2
+│   │   ├── mergedeep v1.3.4
+│   │   ├── platformdirs v4.10.0
+│   │   └── pyyaml v6.0.3
+│   ├── packaging v26.2
+│   ├── pathspec v1.1.1
+│   ├── pyyaml v6.0.3
+│   ├── pyyaml-env-tag v1.1
+│   │   └── pyyaml v6.0.3
+│   └── watchdog v6.0.0
+├── mkdocs-material v9.7.6 (group: dev)
+│   ├── babel v2.18.0
+│   ├── backrefs v7.0
+│   ├── colorama v0.4.6
+│   ├── jinja2 v3.1.6 (*)
+│   ├── markdown v3.10.2
+│   ├── mkdocs v1.6.1 (*)
+│   ├── mkdocs-material-extensions v1.3.1
+│   ├── paginate v0.5.7
+│   ├── pygments v2.20.0
+│   ├── pymdown-extensions v11.0.1
+│   │   ├── markdown v3.10.2
+│   │   └── pyyaml v6.0.3
+│   └── requests v2.34.2
+│       ├── certifi v2026.6.17
+│       ├── charset-normalizer v3.4.9
+│       ├── idna v3.18
+│       └── urllib3 v2.7.0
 ├── mypy v2.2.0 (group: dev)
 │   ├── ast-serialize v0.6.0
 │   ├── librt v0.13.0

@@ -92,6 +92,7 @@ make serve
 
 Historical daily BTC/USD OHLC data from July 2010 through June 2024 is stored in
 `data/raw/BTCUSD_OHLC.csv`.
+Source: [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/bitcoin-historical-prices-and-activity-2010-2024?resource=download&select=bitcoin_2010-07-17_2024-06-28.csv)
 
 ---
 
@@ -111,7 +112,7 @@ Historical daily BTC/USD OHLC data from July 2010 through June 2024 is stored in
 
 Licensed under the Apache 2.0 License.
 
-See `LICENSE` for details.
+See [`LICENSE`](LICENSE.md) for details.
 
 ---
 
