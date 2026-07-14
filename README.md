@@ -43,8 +43,8 @@ BitChaser investigates questions including:
 Clone the repository
 
 ```bash
-git clone https://github.com/camden-white/bitchaser.git
-cd bitchaser
+git clone https://github.com/camden-white/BitChaser.git
+cd BitChaser
 ```
 
 Install dependencies
@@ -112,7 +112,7 @@ Source: [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/bitcoin-historical
 
 Licensed under the Apache 2.0 License.
 
-See [`LICENSE`](LICENSE.md) for details.
+See [`LICENSE`](LICENSE) for details.
 
 ---
 

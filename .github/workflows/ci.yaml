@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   quality:
-    name: Lint, type-check, and test
+    name: Continuous integration checks
     runs-on: ubuntu-latest
 
     steps:
