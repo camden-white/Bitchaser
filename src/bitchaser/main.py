@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+"""Command-line entry point for the BitChaser application."""
 
 # import pandas, numpy, pyarrow,
 # scipy, statsmodels, ta,

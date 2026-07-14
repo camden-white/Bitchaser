@@ -1,3 +1,5 @@
+"""Tests for package initialization and public interfaces."""
+
 import bitchaser
 
 

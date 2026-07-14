@@ -1,6 +1,14 @@
 ## Development
 
+### Get on the Right Branch
+1. `git switch main`\
+Switch to main branch
+
+2. `git pull --ff-only`\
+Pull updates from branch
+
 ### Workflow
+
 1. `make fix`\
 Auto-fix lint issues and format code to standards
 
@@ -125,8 +133,8 @@ Review commit logs
 │       ├── main.py
 │       ├── models
 │       │   ├── __init__.py
-│       │   ├── neural_net.py
-│       │   └── statistical.py
+│       │   ├── long.py
+│       │   └── short.py
 │       ├── py.typed
 │       ├── training
 │       │   ├── __init__.py
