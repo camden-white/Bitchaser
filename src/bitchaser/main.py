@@ -9,7 +9,7 @@
 
 
 def main() -> None:
-    """Main"""
+    """BitChaser application"""
     print("Hello from BitChaser!")
 
 

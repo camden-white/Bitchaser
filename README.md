@@ -8,7 +8,7 @@
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
 
 <!-- Description -->
-BitChaser is a research project that investigates long-horizon and short-horizon forecasting of the price of Bitcoin (BTC/USD) using periodic regressions for long-horizon modeling and time-series analysis for short-horizon forcasting. The project analyzes historical daily OHLC data and relevant financial statistics.
+BitChaser is a research project that investigates long-horizon and short-horizon forecasting of the price of Bitcoin (BTC/USD) using periodic regressions for long-horizon modeling and time-series analysis for short-horizon forecasting. The project analyzes historical daily OHLC data and relevant financial statistics.
 
 ## Status
 

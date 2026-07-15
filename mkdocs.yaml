@@ -1,10 +1,105 @@
 site_name: BitChaser
-site_description: Bitcoin forecasting using statistics and time-series analysis
+site_description: Bitcoin forecasting with periodic models and time-series analysis
 site_author: Camden White
+site_url: https://camden-white.github.io/BitChaser/
+
+repo_name: camden-white/BitChaser
 repo_url: https://github.com/camden-white/BitChaser
+edit_uri: edit/main/docs/
+
+copyright: >
+  Copyright &copy; 2026 Camden White
 
 theme:
   name: material
+  favicon: assets/images/favicon-v3.webp
+  logo: assets/images/logo.png
+  language: en
+  icon:
+    # favicon: fontawesome/brands/bitcoin
+    repo: fontawesome/brands/github
+
+
+  font: false
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
 
 nav:
   - Home: index.md
+  - Research:
+      - Overview: research/index.md
+      - Data: research/data.md
+      - Methodology: research/methodology.md
+      - Models: research/models.md
+      - Evaluation: research/evaluation.md
+  - Results:
+      - Overview: results/index.md
+      - Long-Term Forecasting: results/long-term.md
+      - Short-Term Forecasting: results/short-term.md
+  - Reference:
+      - Project Structure: reference/project-structure.md
+      - Configuration: reference/configuration.md
+  - About: about.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/camden-white
+      name: Camden White on GitHub

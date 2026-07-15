@@ -16,3 +16,8 @@ All functional changes to this project will be documented in this file.
 - Fixed stuff -->
 
 ---
+
+## [0.1.0] - 2026-07-14
+
+### Added
+- Full MkDocs site with minimal aesthetic

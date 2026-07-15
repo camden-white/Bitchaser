@@ -1,0 +1,388 @@
+/* --------------------------------------------------------------------------
+   BitChaser
+   customization for Material for MkDocs
+   -------------------------------------------------------------------------- */
+
+/* System typography */
+:root {
+  --bc-orange: #f7931a;
+  --bc-orange-hover: #e9820b;
+
+  --md-text-font:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  --md-code-font:
+    "SFMono-Regular",
+    "SF Mono",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+}
+
+/* Light theme */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #1d1d1f;
+  --md-default-fg-color--light: #6e6e73;
+  --md-default-fg-color--lighter: #86868b;
+  --md-default-fg-color--lightest: #d2d2d7;
+
+  --md-primary-fg-color: rgba(255, 255, 255, 0.82);
+  --md-primary-bg-color: #1d1d1f;
+
+  --md-accent-fg-color: var(--bc-orange);
+
+  --md-typeset-a-color: #0066cc;
+  --md-code-bg-color: #f5f5f7;
+  --md-footer-bg-color: #f5f5f7;
+  --md-footer-fg-color: #424245;
+}
+
+/* Dark theme */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #000000;
+  --md-default-fg-color: #f5f5f7;
+  --md-default-fg-color--light: #a1a1a6;
+  --md-default-fg-color--lighter: #86868b;
+  --md-default-fg-color--lightest: #424245;
+
+  --md-primary-fg-color: rgba(22, 22, 23, 0.82);
+  --md-primary-bg-color: #f5f5f7;
+
+  --md-accent-fg-color: var(--bc-orange);
+
+  --md-typeset-a-color: #2997ff;
+  --md-code-bg-color: #1d1d1f;
+  --md-footer-bg-color: #161617;
+  --md-footer-fg-color: #d2d2d7;
+}
+
+/* Wider, spacious content area */
+.md-grid {
+  max-width: 1440px;
+}
+
+/* Translucent header */
+.md-header {
+  color: var(--md-default-fg-color);
+  background: var(--md-primary-fg-color);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 12%, transparent);
+  box-shadow: none;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Translucent navigation tabs */
+.md-tabs {
+  color: var(--md-default-fg-color);
+  background: var(--md-primary-fg-color);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 10%, transparent);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.md-tabs__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.72;
+  transition:
+    opacity 180ms ease,
+    color 180ms ease;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  color: var(--md-default-fg-color);
+  opacity: 1;
+}
+
+/* Brand title */
+.md-header__title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Bitcoin logo */
+.md-header__button.md-logo {
+  color: var(--bc-orange);
+}
+
+/* Main article */
+.md-content__inner {
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+}
+
+/* Large, clean typography */
+.md-typeset {
+  color: var(--md-default-fg-color);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.md-typeset h1 {
+  margin-bottom: 1.2rem;
+  color: var(--md-default-fg-color);
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.md-typeset h2 {
+  margin-top: 3.5rem;
+  color: var(--md-default-fg-color);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.md-typeset h3 {
+  margin-top: 2.5rem;
+  color: var(--md-default-fg-color);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.md-typeset p,
+.md-typeset li {
+  color: var(--md-default-fg-color--light);
+}
+
+/* Links */
+.md-typeset a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: opacity 160ms ease;
+}
+
+.md-typeset a:hover {
+  opacity: 0.72;
+}
+
+/* Rounded code blocks */
+.md-typeset pre {
+  border: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 10%, transparent);
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.md-typeset code {
+  border-radius: 6px;
+}
+
+/* Tables as clean floating surfaces */
+.md-typeset table:not([class]) {
+  overflow: hidden;
+  border: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 10%, transparent);
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.md-typeset table:not([class]) th {
+  font-weight: 600;
+  background:
+    color-mix(in srgb, var(--md-default-fg-color) 5%, transparent);
+}
+
+/* Content cards */
+.grid.cards > ul > li,
+.bc-card {
+  border: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 10%, transparent);
+  border-radius: 24px;
+  background:
+    color-mix(in srgb, var(--md-default-bg-color) 94%, var(--md-default-fg-color));
+  box-shadow: none;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease;
+}
+
+.grid.cards > ul > li:hover,
+.bc-card:hover {
+  border-color:
+    color-mix(in srgb, var(--md-default-fg-color) 20%, transparent);
+  transform: translateY(-3px);
+}
+
+/* Admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  border: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 10%, transparent);
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+/* Sidebar navigation */
+.md-nav__link {
+  font-size: 0.72rem;
+  transition:
+    color 160ms ease,
+    opacity 160ms ease;
+}
+
+.md-nav__link:hover {
+  color: var(--md-default-fg-color);
+}
+
+.md-nav__link--active {
+  color: var(--bc-orange);
+  font-weight: 600;
+}
+
+/* Search field */
+.md-search__form {
+  border: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 10%, transparent);
+  border-radius: 12px;
+  background:
+    color-mix(in srgb, var(--md-default-bg-color) 75%, transparent);
+  box-shadow: none;
+}
+
+/* Footer */
+.md-footer {
+  border-top: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 10%, transparent);
+}
+
+.md-footer-meta {
+  background: var(--md-footer-bg-color);
+}
+
+/* --------------------------------------------------------------------------
+   Home-page hero
+   -------------------------------------------------------------------------- */
+
+.bc-hero {
+  display: grid;
+  min-height: min(720px, 78vh);
+  place-content: center;
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+.bc-eyebrow {
+  margin-bottom: 1rem;
+  color: var(--bc-orange) !important;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bc-hero h1 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bc-subtitle {
+  max-width: 720px;
+  margin: 1.75rem auto 0;
+  color: var(--md-default-fg-color--light) !important;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+.bc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 2.2rem;
+}
+
+.bc-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    opacity 180ms ease;
+}
+
+.bc-button:hover {
+  opacity: 1 !important;
+  transform: translateY(-1px);
+}
+
+.bc-button--primary {
+  color: #ffffff !important;
+  background: var(--bc-orange);
+}
+
+.bc-button--primary:hover {
+  background: var(--bc-orange-hover);
+}
+
+.bc-button--secondary {
+  color: var(--md-default-fg-color) !important;
+  border: 1px solid
+    color-mix(in srgb, var(--md-default-fg-color) 18%, transparent);
+  background:
+    color-mix(in srgb, var(--md-default-bg-color) 88%, var(--md-default-fg-color));
+}
+
+/* Remove excessive top margin from the hero's first heading */
+.bc-hero > :first-child {
+  margin-top: 0;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 76.2344em) {
+  .md-content__inner {
+    padding-top: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 44.9844em) {
+  .bc-hero {
+    min-height: 65vh;
+    padding: 4rem 0;
+  }
+
+  .bc-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bc-button {
+    width: 100%;
+  }
+
+  .md-typeset h1 {
+    letter-spacing: -0.045em;
+  }
+}
+
+/* Respect reduced-motion accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

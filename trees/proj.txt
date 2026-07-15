@@ -11,7 +11,29 @@
 │   └── raw
 │       └── BTCUSD_OHLC.csv
 ├── docs
-│   └── index.md
+│   ├── about.md
+│   ├── assets
+│   │   └── images
+│   │       ├── banner.png
+│   │       ├── bitcoin-B.webp
+│   │       ├── favicon-v3.webp
+│   │       └── logo.png
+│   ├── index.md
+│   ├── reference
+│   │   ├── configuration.md
+│   │   └── project-structure.md
+│   ├── research
+│   │   ├── data.md
+│   │   ├── evaluation.md
+│   │   ├── index.md
+│   │   ├── methodology.md
+│   │   └── models.md
+│   ├── results
+│   │   ├── index.md
+│   │   ├── long-term.md
+│   │   └── short-term.md
+│   └── stylesheets
+│       └── extra.css
 ├── mkdocs.yaml
 ├── models
 ├── notebooks

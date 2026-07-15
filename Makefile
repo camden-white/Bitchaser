@@ -10,7 +10,6 @@ PYTHON = $(RUN) python
 RUFF = $(RUN) ruff
 PYTEST = $(RUN) pytest
 MYPY = $(RUN) mypy
-
 UPDATE_SECTION = $(PYTHON) scripts/update_section.py
 
 help:
@@ -53,10 +52,10 @@ notebook:
 	$(RUN) jupyter lab
 
 docs:
-	$(RUN) mkdocs build --strict
+	uv run mkdocs build --strict -f mkdocs.yaml
 
 serve:
-	$(RUN) mkdocs serve
+	uv run mkdocs serve --clean -f mkdocs.yaml
 
 lint:
 	$(RUFF) check .
