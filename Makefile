@@ -45,7 +45,8 @@ install:
 
 update:
 	$(MAN) lock --upgrade
-	$(MAN) sync
+	$(RUN) pre-commit autoupdate
+	$(MAN) sync --all-groups
 	$(MAKE) trees
 
 notebook:

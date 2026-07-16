@@ -29,9 +29,6 @@ Issues = "https://github.com/camden-white/BitChaser/issues"
 
 [dependency-groups]
 dev = [
-    "jupyterlab>=4.6.1",
-    "mkdocs>=1.6.1",
-    "mkdocs-material>=9.7.6",
     "mypy>=2.2.0",
     "pandas-stubs>=3.0.3.260530",
     "pre-commit>=4.6.0",
@@ -42,14 +39,16 @@ dev = [
     "types-requests>=2.33.0.20260518",
 ]
 docs = [
-    "mkdocs>=1.6.1",
+    "mkdocs>=1.6.1,<2",
     "mkdocs-material>=9.7.6",
 ]
 notebook = [
     "ipykernel>=7.3.0",
-    "ipython>=9.15.0",
-    "jupyter>=1.1.1",
+    "jupyterlab>=4.6.1",
 ]
+
+[tool.uv]
+default-groups = "all"
 
 [build-system]
 requires = ["uv_build>=0.11.28,<0.12"]

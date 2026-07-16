@@ -63,7 +63,7 @@ Run the BitChaser application
 make run
 ```
 
-Launch Jupyter for exploratory analysis:
+Launch Jupyter for exploratory analysis
 
 ```bash
 make notebook
@@ -73,12 +73,22 @@ make notebook
 
 ## Technologies
 
-- MkDocs
+### Analysis
+- Python 3.14
+- pandas
+- Jupyter
+
+### Development
+- uv
+- Ruff
 - mypy
 - pytest
-- Python
-- Ruff
-- uv
+- pre-commit
+- GNU Make
+
+### Documentation
+- MkDocs
+- Material fo MkDocs
 
 ---
 

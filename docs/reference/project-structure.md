@@ -23,7 +23,6 @@
 │   ├── assets
 │   │   └── images
 │   │       ├── BitChaser_logo.svg
-│   │       ├── BitChaser_squarelogo.svg
 │   │       └── favicon-v3.webp
 │   ├── index.md
 │   ├── reference

@@ -29,6 +29,18 @@ Commit files with message explaining change
 7. `git push`\
 Upload commits to GitHub
 
+### Documentation
+
+Build documentation (MkDocs)
+```bash
+make docs
+```
+
+Serve docs on local host (MkDocs)
+```bash
+make serve
+```
+
 ### Makefile Commands
 
 | Command | Description |
