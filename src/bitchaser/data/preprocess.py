@@ -1,1 +1,1 @@
-"""Functions for cleaning and preprocessing Bitcoin market data."""
+"""Functions for cleaning and validating Bitcoin OHLC data."""

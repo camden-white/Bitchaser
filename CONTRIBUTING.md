@@ -106,8 +106,9 @@ Review commit logs
 │   ├── about.md
 │   ├── assets
 │   │   └── images
-│   │       ├── favicon-v3.webp
-│   │       └── logo.png
+│   │       ├── BitChaser_logo.svg
+│   │       ├── BitChaser_squarelogo.svg
+│   │       └── favicon-v3.webp
 │   ├── index.md
 │   ├── reference
 │   │   ├── configuration.md
@@ -120,18 +121,20 @@ Review commit logs
 │   │   └── models.md
 │   ├── results
 │   │   ├── index.md
-│   │   ├── long-term.md
-│   │   └── short-term.md
+│   │   ├── long.md
+│   │   └── short.md
 │   └── stylesheets
 │       └── extra.css
 ├── mkdocs.yaml
 ├── models
 ├── notebooks
-│   └── 01_data_exploration.ipynb
+│   ├── 01_data_exploration.ipynb
+│   └── 02_data_exploration.ipynb
 ├── pyproject.toml
 ├── reports
 │   └── figures
 ├── scripts
+│   ├── preprocess_data.py
 │   └── update_section.py
 ├── src
 │   └── bitchaser
@@ -162,6 +165,8 @@ Review commit logs
 │       └── utils.py
 ├── tests
 │   ├── __init__.py
+│   ├── data
+│   │   └── test_preprocess.py
 │   ├── test_data.py
 │   ├── test_features.py
 │   ├── test_models.py

@@ -11,7 +11,7 @@ hide:
 # Decrypt the cycle.
 
 <p class="bc-subtitle">
-BitChaser explores short-horizon OHLC time-series analysis and long-horizon periodic models of BTC/USD market ratio
+BitChaser explores short-horizon OHLC time-series analysis<br>and long-horizon periodic models of BTC/USD market ratio
 </p>
 
 <div class="bc-actions">

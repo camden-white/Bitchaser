@@ -3,6 +3,12 @@ bitchaser v0.1.0
 │   ├── numpy v2.5.1
 │   └── python-dateutil v2.9.0.post0
 │       └── six v1.17.0
+├── pyarrow v25.0.0
+├── pytest v9.1.1
+│   ├── iniconfig v2.3.0
+│   ├── packaging v26.2
+│   ├── pluggy v1.6.0
+│   └── pygments v2.20.0
 ├── jupyterlab v4.6.1 (group: dev)
 │   ├── async-lru v2.3.0
 │   ├── httpx v0.28.1
@@ -214,11 +220,7 @@ bitchaser v0.1.0
 │       └── python-discovery v1.4.4
 │           ├── filelock v3.29.7
 │           └── platformdirs v4.10.0
-├── pytest v9.1.1 (group: dev)
-│   ├── iniconfig v2.3.0
-│   ├── packaging v26.2
-│   ├── pluggy v1.6.0
-│   └── pygments v2.20.0
+├── pytest v9.1.1 (group: dev) (*)
 ├── pytest-cov v7.1.0 (group: dev)
 │   ├── coverage v7.15.1
 │   ├── pluggy v1.6.0

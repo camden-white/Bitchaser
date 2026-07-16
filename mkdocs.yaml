@@ -13,7 +13,7 @@ copyright: >
 theme:
   name: material
   favicon: assets/images/favicon-v3.webp
-  logo: assets/images/logo.png
+  logo: assets/images/BitChaser_logo.svg
   language: en
   icon:
     # favicon: fontawesome/brands/bitcoin
@@ -63,8 +63,8 @@ nav:
       - Evaluation: research/evaluation.md
   - Results:
       - Overview: results/index.md
-      - Long-Term Forecasting: results/long-term.md
-      - Short-Term Forecasting: results/short-term.md
+      - Long-Horizon Forecasting: results/long.md
+      - Short-Horizon Forecasting: results/short.md
   - Reference:
       - Project Structure: reference/project-structure.md
       - Configuration: reference/configuration.md

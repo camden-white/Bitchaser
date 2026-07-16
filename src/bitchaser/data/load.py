@@ -1,1 +1,1 @@
-"""Functions for loading Bitcoin datasets into memory."""
+"""Functions for loading raw and processed market data."""
