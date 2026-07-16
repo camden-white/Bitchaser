@@ -63,16 +63,10 @@ Run the BitChaser application
 make run
 ```
 
-Launch Jupyter in browser
+Launch Jupyter for exploratory analysis:
 
 ```bash
 make notebook
-```
-
-Serve documentation (built with MkDocs)
-
-```bash
-make serve
 ```
 
 ---
@@ -105,6 +99,20 @@ Source: [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/bitcoin-historical
 - [ ] Daily OHLC analysis
 - [ ] OHLC next-day prediction
 - [ ] OHLC multi-day prediction
+
+---
+
+## Documentation
+
+See the [BitChaser documentation](https://camden-white.github.io/BitChaser/)
+for research methodology, project configuration, and results.
+
+---
+
+## Contributing
+
+Development instructions and coding standards are available in
+[`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
 

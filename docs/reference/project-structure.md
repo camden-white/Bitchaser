@@ -1,1 +1,95 @@
 🚧 Active development
+
+---
+
+## Project Tree
+
+<!-- PROJECT_TREE_START -->
+```text
+.
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── Makefile
+├── README.md
+├── SECURITY.md
+├── data
+│   ├── processed
+│   └── raw
+│       └── BTCUSD_OHLC.csv
+├── docs
+│   ├── about.md
+│   ├── assets
+│   │   └── images
+│   │       ├── BitChaser_logo.svg
+│   │       ├── BitChaser_squarelogo.svg
+│   │       └── favicon-v3.webp
+│   ├── index.md
+│   ├── reference
+│   │   ├── configuration.md
+│   │   └── project-structure.md
+│   ├── research
+│   │   ├── data.md
+│   │   ├── evaluation.md
+│   │   ├── index.md
+│   │   ├── methodology.md
+│   │   └── models.md
+│   ├── results
+│   │   ├── index.md
+│   │   ├── long.md
+│   │   └── short.md
+│   └── stylesheets
+│       └── extra.css
+├── mkdocs.yaml
+├── models
+├── notebooks
+│   ├── 01_data_exploration.ipynb
+│   └── 02_data_exploration.ipynb
+├── pyproject.toml
+├── reports
+│   └── figures
+├── scripts
+│   ├── preprocess_data.py
+│   └── update_section.py
+├── src
+│   └── bitchaser
+│       ├── __init__.py
+│       ├── config.py
+│       ├── data
+│       │   ├── __init__.py
+│       │   ├── load.py
+│       │   └── preprocess.py
+│       ├── evaluation
+│       │   ├── __init__.py
+│       │   └── metrics.py
+│       ├── features
+│       │   ├── __init__.py
+│       │   └── indicators.py
+│       ├── inference
+│       │   ├── __init__.py
+│       │   └── predict.py
+│       ├── main.py
+│       ├── models
+│       │   ├── __init__.py
+│       │   ├── long.py
+│       │   └── short.py
+│       ├── py.typed
+│       ├── training
+│       │   ├── __init__.py
+│       │   └── train.py
+│       └── utils.py
+├── tests
+│   ├── __init__.py
+│   ├── data
+│   │   └── test_preprocess.py
+│   ├── test_data.py
+│   ├── test_features.py
+│   ├── test_models.py
+│   └── test_package.py
+└── uv.lock
+
+```
+<!-- PROJECT_TREE_END -->
+
+---

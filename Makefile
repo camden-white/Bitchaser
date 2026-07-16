@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-.PHONY: help install update notebook docs serve lint lintfix formatcheck format fix typecheck static test coverage check ci deptree projtree trees precommit preprocess run clean
+.PHONY: help install update notebook docs serve lint lintfix formatcheck format fix typecheck static test coverage check ci deptree projtree trees precommit run clean
 
 .DELETE_ON_ERROR:
 
@@ -100,18 +100,10 @@ projtree:
 	> trees/proj.txt --noreport
 
 trees: deptree projtree
-	$(UPDATE_SECTION) CONTRIBUTING.md PROJECT_TREE trees/proj.txt --fence text
+	$(UPDATE_SECTION) docs/reference/project-structure.md PROJECT_TREE trees/proj.txt --fence text
 
 precommit: trees
 	$(RUN) pre-commit run --all-files
-
-RAW_DATA := data/raw/BTCUSD_OHLC.csv
-PROCESSED_DATA := data/processed/btc_ohlc.parquet
-
-preprocess: $(PROCESSED_DATA)
-
-$(PROCESSED_DATA): $(RAW_DATA)
-	$(PYTHON) scripts/preprocess_data.py
 
 run:
 	$(RUN) bitchaser
